@@ -1,12 +1,13 @@
 {
-  "name": "grail-tracker",
+  "name": "tainted-grail-tracker",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --output-path dist --base-href https://gabihorvath.github.com/tainted-grail-tracker"
   },
   "private": true,
   "dependencies": {
