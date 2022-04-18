@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --output-path dist --base-href https://gabihorvath.github.com/tainted-grail-tracker"
+    "deploy": "ng build --output-path docs --base-href https://gabihorvath.github.com/tainted-grail-tracker && copy \"./.nojekyll\" \"./docs/.nojekyll\""
   },
   "private": true,
   "dependencies": {
