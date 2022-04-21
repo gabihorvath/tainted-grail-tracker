@@ -8,6 +8,7 @@ import { SaveService } from './services/save.service';
 })
 export class AppComponent {
   title = 'tainted-grail-tracker';
+  isSaveGameActive = false;
 
   public constructor(
     private saveService: SaveService
@@ -18,12 +19,14 @@ export class AppComponent {
     const file:File = event.target.files[0];
 
     if (file) {
-      this.saveService.loadSaveGame(await file.text());
+      await this.saveService.loadSaveGame(await file.text());
+      this.isSaveGameActive = true;
     }
   }
 
   public createSaveFile(): void
   {
     this.saveService.createSaveGame();
+    this.isSaveGameActive = true;
   }
 }

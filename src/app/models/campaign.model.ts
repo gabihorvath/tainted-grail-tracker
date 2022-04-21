@@ -2,8 +2,8 @@ import { AvalonSave } from "./avalon-save.model";
 
 export class Campaign
 {
-    private _title: string = "";
-    private _description: string = "";
+    private _title: string = "New campaign";
+    private _description: string = "My first play through";
     private _avalonSave: AvalonSave = {};
 
     public constructor(init?:Partial<Campaign>) {

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isSaveGameActive">
   <div class="row">
     <div class="col">
       <h1>Welcome to the Tainted Grails Tracker</h1>
@@ -27,3 +27,7 @@
     </div>
   </div>
 </div>
+
+<ng-container *ngIf="isSaveGameActive">
+  <app-campaign-list></app-campaign-list>
+</ng-container>

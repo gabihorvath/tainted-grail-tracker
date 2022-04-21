@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{saveGame.title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card" *ngFor="let campaign of saveGame.campaigns">
+          <div class="card-body">
+            <h5 class="card-title">{{campaign.title}}</h5>
+            <p class="card-text">{{campaign.description}}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
